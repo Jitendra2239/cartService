@@ -2,6 +2,7 @@ package com.jitendra.cartservice.model;
 
 
 
+import lombok.Builder;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 

@@ -6,6 +6,8 @@ import com.jitendra.cartservice.model.Cart;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
+import java.time.Duration;
+
 @Repository
 public class CartRepositoryImpl implements CartRepository {
 
@@ -21,7 +23,7 @@ public class CartRepositoryImpl implements CartRepository {
     public Cart save(Cart cart) {
 
         redisTemplate.opsForValue()
-                .set(KEY + cart.getUserId(), cart);
+                .set(KEY + cart.getUserId(), cart, Duration.ofHours(24));
 
         return cart;
     }

@@ -8,8 +8,10 @@ import com.jitendra.cartservice.service.CartService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.concurrent.ExecutionException;
+
 @RestController
-@RequestMapping("/api/cart")
+@RequestMapping("/api/v1/cart")
 public class CartController {
 
     private final CartService cartService;
@@ -28,7 +30,7 @@ public class CartController {
     @PostMapping("/{userId}/add")
     public ResponseEntity<Cart> addItem(
             @PathVariable Long userId,
-            @RequestBody CartItem item) {
+            @RequestBody CartItem item) throws ExecutionException, InterruptedException {
 
         return ResponseEntity.ok(
                 cartService.addItem(userId, item));
