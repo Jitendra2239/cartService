@@ -1,10 +1,13 @@
 package com.jitendra.cartservice.model;
 
+import com.jitendra.cartservice.visitor.Item;
+import com.jitendra.cartservice.visitor.Visitor;
+
 import java.io.Serializable;
 
-public class CartItem implements Serializable {
+public class CartItem implements Item {
 
-    private Long productId;
+    private String productId;
 
     private String productName;
 
@@ -17,7 +20,7 @@ public class CartItem implements Serializable {
     public CartItem() {
     }
 
-    public Long getProductId() {
+    public String getProductId() {
         return productId;
     }
 
@@ -37,7 +40,7 @@ public class CartItem implements Serializable {
         return totalPrice;
     }
 
-    public void setProductId(Long productId) {
+    public void setProductId(String productId) {
         this.productId = productId;
     }
 
@@ -55,5 +58,10 @@ public class CartItem implements Serializable {
 
     public void setTotalPrice(Double totalPrice) {
         this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public void accept(Visitor visitor) {
+         visitor.visit(this);
     }
 }

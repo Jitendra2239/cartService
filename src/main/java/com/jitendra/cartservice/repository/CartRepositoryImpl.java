@@ -7,6 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.time.Duration;
+import java.util.Optional;
 
 @Repository
 public class CartRepositoryImpl implements CartRepository {
@@ -29,12 +30,13 @@ public class CartRepositoryImpl implements CartRepository {
     }
 
     @Override
-    public Cart findByUserId(Long userId) {
+    public Optional<Cart> findByUserId(Long userId) {
 
-        return (Cart) redisTemplate.opsForValue()
+        Cart cart = (Cart) redisTemplate.opsForValue()
                 .get(KEY + userId);
-    }
 
+        return Optional.ofNullable(cart);
+    }
     @Override
     public void delete(Long userId) {
 

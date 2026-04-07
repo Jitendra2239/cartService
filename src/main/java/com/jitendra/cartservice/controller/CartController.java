@@ -5,49 +5,59 @@ package com.jitendra.cartservice.controller;
 import com.jitendra.cartservice.model.Cart;
 import com.jitendra.cartservice.model.CartItem;
 import com.jitendra.cartservice.service.CartService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.concurrent.ExecutionException;
+        import java.util.concurrent.ExecutionException;
 
 @RestController
-@RequestMapping("/api/v1/cart")
+@RequestMapping("/api/v1/carts")
+@RequiredArgsConstructor
 public class CartController {
 
     private final CartService cartService;
 
-    public CartController(CartService cartService) {
-        this.cartService = cartService;
-    }
+    @PreAuthorize("hasRole('USER')")
+    @GetMapping
+    public ResponseEntity<Cart> getCart(Authentication authentication) {
 
-    @GetMapping("/{userId}")
-    public ResponseEntity<Cart> getCart(
-            @PathVariable Long userId) {
+        Long userId =  Long.parseLong(authentication.getPrincipal().toString());
 
         return ResponseEntity.ok(cartService.getCart(userId));
     }
 
-    @PostMapping("/{userId}/add")
+    @PreAuthorize("hasRole('USER')")
+    @PostMapping("/add")
     public ResponseEntity<Cart> addItem(
-            @PathVariable Long userId,
-            @RequestBody CartItem item) throws ExecutionException, InterruptedException {
+            @RequestBody CartItem item,
+            Authentication authentication) throws ExecutionException, InterruptedException {
+
+        Long userId =  Long.parseLong(authentication.getPrincipal().toString());
 
         return ResponseEntity.ok(
                 cartService.addItem(userId, item));
     }
 
-    @DeleteMapping("/{userId}/remove/{productId}")
+    @PreAuthorize("hasRole('USER')")
+    @DeleteMapping("/remove/{productId}")
     public ResponseEntity<Cart> removeItem(
-            @PathVariable Long userId,
-            @PathVariable Long productId) {
+            @PathVariable Long productId,
+            Authentication authentication) {
+
+        Long userId =  Long.parseLong(authentication.getPrincipal().toString());
 
         return ResponseEntity.ok(
                 cartService.removeItem(userId, productId));
     }
 
-    @DeleteMapping("/{userId}/clear")
-    public ResponseEntity<String> clearCart(
-            @PathVariable Long userId) {
+    @PreAuthorize("hasRole('USER')")
+    @DeleteMapping("/clear")
+    public ResponseEntity<String> clearCart(Authentication authentication) {
+
+        Long userId =  Long.parseLong(authentication.getPrincipal().toString());
 
         cartService.clearCart(userId);
 
