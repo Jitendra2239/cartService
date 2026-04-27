@@ -18,7 +18,7 @@ public class SecurityConfig {
         return http
                 .csrf(csrf -> csrf.disable())
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers( "/public/**").permitAll()
+                        .requestMatchers( "/api/v1/carts/internal/**").permitAll()
                         .anyRequest().authenticated() // others secured
                 )
                 .addFilterBefore(filter, UsernamePasswordAuthenticationFilter.class)

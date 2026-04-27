@@ -1,5 +1,6 @@
 package com.jitendra.cartservice.service;
 
+import com.jitendra.cartservice.dto.CartDto;
 import com.jitendra.cartservice.exception.CartNotFoundException;
 import com.jitendra.cartservice.exception.ItemNotFoundException;
 import com.jitendra.cartservice.model.Cart;
@@ -14,6 +15,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
@@ -23,17 +25,61 @@ import java.util.concurrent.ExecutionException;
 public class CartServiceImpl implements CartService {
 
     private final CartRepository cartRepository;
+    public Cart toCart(CartDto dto) {
 
-    // 1️⃣ Get Cart
+        if (dto == null) return null;
+
+        Cart cart = new Cart();
+
+        cart.setUserId(dto.getUserId());
+
+        List<CartItem> items = dto.getItems() == null
+                ? new ArrayList<>()
+                : new ArrayList<>(dto.getItems());
+
+        cart.setItems(items);
+
+        double total = items.stream()
+                .filter(Objects::nonNull)
+                .mapToDouble(i -> {
+                    double price = i.getPrice() == null ? 0.0 : i.getPrice();
+                    int qty = i.getQuantity() == null ? 0 : i.getQuantity();
+                    return price * qty;
+                })
+                .sum();
+
+        cart.setTotalAmount(total);
+
+        return cart;
+    }
+    public  CartDto toCartDto(Cart cart) {
+
+        if (cart == null) return null;
+
+        CartDto dto = new CartDto();
+        dto.setUserId(cart.getUserId());
+        dto.setItems(cart.getItems());
+
+        double total = cart.getItems() == null ? 0.0 :
+                cart.getItems().stream()
+                        .mapToDouble(i -> i.getPrice() * i.getQuantity())
+                        .sum();
+
+        dto.setTotalAmount(total);
+
+        return dto;
+    }
     @Override
-    public Cart getCart(Long userId) {
-        return cartRepository.findByUserId(userId)
+    public CartDto getCart(Long userId) {
+        System.out.println("Getting cart for userId: " + userId);
+   Cart cart= cartRepository.findByUserId(userId)
                 .orElseThrow(() -> new CartNotFoundException("Cart not found for user: " + userId));
+      return toCartDto(cart);
     }
 
     // 2️⃣ Add Item
     @Override
-    public Cart addItem(Long userId, CartItem item)
+    public CartDto addItem(Long userId, CartItem item)
             throws ExecutionException, InterruptedException {
 
 
@@ -60,13 +106,14 @@ public class CartServiceImpl implements CartService {
         }
         PriceCalculatorVisitor priceCalculatorVisitor=new PriceCalculatorVisitor();
         cart.setTotalAmount(priceCalculatorVisitor.getTotal());
-        return cartRepository.save(cart);
+        Cart cart1= cartRepository.save(cart);
+        return toCartDto(cart1);
     }
 
 
     @Override
-    public Cart removeItem(Long userId, Long productId) {
-        Cart cart = getCart(userId);
+    public CartDto removeItem(Long userId, Long productId) {
+        CartDto cart = getCart(userId);
 
         boolean removed = cart.getItems().removeIf(item ->
                 item.getProductId().equals(productId)
@@ -75,18 +122,34 @@ public class CartServiceImpl implements CartService {
         if (!removed) {
             throw new ItemNotFoundException("Item not found in cart: " + productId);
         }
-
-        return cartRepository.save(cart);
+        Cart cart1= toCart(cart);
+        cart1.setUserId(userId);
+        Cart cart2= cartRepository.save(cart1);
+        return toCartDto(cart2);
     }
 
     // 4️⃣ Clear Cart
     @Override
-    public Cart clearCart(Long userId) {
-        Cart cart = getCart(userId);
+    public CartDto clearCart(Long userId) {
+        CartDto cart = getCart(userId);
         cart.getItems().clear();
-        return cartRepository.save(cart);
+       Cart cart1= toCart(cart);
+       cart1.setUserId(userId);
+        Cart cart2= cartRepository.save(cart1);
+       return  toCartDto(cart1);
     }
 }
+
+//public CartItem toCartItem(CartItemDto dto) {
+//
+//    CartItem item = new CartItem();
+//    item.setProductId(dto.getProductId());
+//    item.setQuantity(dto.getQuantity());
+//    item.setPrice(dto.getPrice());
+//
+//    return item;
+//}
+
 
 //    @KafkaListener(topics = "add-to-cart-response", groupId = "cart-group")
 //    public void handleAddToCartResponse(AddToCartResponseEvent response) {

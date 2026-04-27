@@ -5,7 +5,7 @@ import com.jitendra.cartservice.visitor.Visitor;
 
 import java.io.Serializable;
 
-public class CartItem implements Item {
+public class CartItem implements Serializable {
 
     private String productId;
 
@@ -60,8 +60,5 @@ public class CartItem implements Item {
         this.totalPrice = totalPrice;
     }
 
-    @Override
-    public void accept(Visitor visitor) {
-         visitor.visit(this);
-    }
+
 }

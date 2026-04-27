@@ -1,0 +1,527 @@
+nohup: ignoring input
+[[1;34mINFO[m] Scanning for projects...
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m----------------------< [0;36mcom.jitendra:cartService[0;1m >----------------------[m
+[[1;34mINFO[m] [1mBuilding cartService 0.0.1-SNAPSHOT[m
+[[1;34mINFO[m]   from pom.xml
+[[1;34mINFO[m] [1m--------------------------------[ jar ]---------------------------------[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m>>> [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m > [0;1mtest-compile[m @ [36mcartService[0;1m >>>[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:resources[m [1m(default-resources)[m @ [36mcartService[0;1m ---[m
+[[1;34mINFO[m] Copying 1 resource from src/main/resources to target/classes
+[[1;34mINFO[m] Copying 0 resource from src/main/resources to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:compile[m [1m(default-compile)[m @ [36mcartService[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged source code[m.
+[[1;34mINFO[m] Compiling 21 source files with javac [debug parameters release 17] to target/classes
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mresources:3.3.1:testResources[m [1m(default-testResources)[m @ [36mcartService[0;1m ---[m
+[[1;34mINFO[m] skip non existing resourceDirectory /home/jitendra/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/cartService/src/test/resources
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mcompiler:3.13.0:testCompile[m [1m(default-testCompile)[m @ [36mcartService[0;1m ---[m
+[[1;34mINFO[m] Recompiling the module because of [1mchanged dependency[m.
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m<<< [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[0;1m < [0;1mtest-compile[m @ [36mcartService[0;1m <<<[m
+[[1;34mINFO[m] 
+[[1;34mINFO[m] 
+[[1;34mINFO[m] [1m--- [0;32mspring-boot:3.3.3:run[m [1m(default-cli)[m @ [36mcartService[0;1m ---[m
+[[1;34mINFO[m] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.3)
+
+2026-04-26T20:33:44.738+05:30  INFO 18295 --- [cart-service] [  restartedMain] c.j.cartservice.CartServiceApplication   : Starting CartServiceApplication using Java 17.0.16 with PID 18295 (/home/jitendra/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/cartService/target/classes started by jitendra in /home/jitendra/Documents/workspace-spring-tools-for-eclipse-4.31.0.RELEASE/cartService)
+2026-04-26T20:33:44.739+05:30  INFO 18295 --- [cart-service] [  restartedMain] c.j.cartservice.CartServiceApplication   : No active profile set, falling back to 1 default profile: "default"
+2026-04-26T20:33:44.772+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8092
+2026-04-26T20:33:44.772+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=cart-service, profiles=[default], label=null, version=5f65aad33b54e4d2b9a90c3557fc0a5641f31103, state=null
+2026-04-26T20:33:44.773+05:30  INFO 18295 --- [cart-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-04-26T20:33:44.774+05:30  INFO 18295 --- [cart-service] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-04-26T20:33:45.484+05:30  INFO 18295 --- [cart-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-04-26T20:33:45.486+05:30  INFO 18295 --- [cart-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-04-26T20:33:45.525+05:30  INFO 18295 --- [cart-service] [  restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 16 ms. Found 0 Redis repository interfaces.
+2026-04-26T20:33:45.820+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=6f9aa0f6-ee35-3a5b-87ef-bfcc429404af
+2026-04-26T20:33:45.891+05:30  WARN 18295 --- [cart-service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$DeferringLoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+2026-04-26T20:33:45.893+05:30  WARN 18295 --- [cart-service] [  restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'deferringLoadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.DeferringLoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+2026-04-26T20:33:46.233+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8089 (http)
+2026-04-26T20:33:46.246+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-04-26T20:33:46.247+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.28]
+2026-04-26T20:33:46.295+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-04-26T20:33:46.296+05:30  INFO 18295 --- [cart-service] [  restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1521 ms
+2026-04-26T20:33:46.871+05:30  WARN 18295 --- [cart-service] [  restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 19f1288f-432a-48a5-bbbf-0651826454f7
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2026-04-26T20:33:46.893+05:30  INFO 18295 --- [cart-service] [  restartedMain] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2026-04-26T20:33:47.446+05:30  WARN 18295 --- [cart-service] [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2026-04-26T20:33:47.816+05:30  INFO 18295 --- [cart-service] [  restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2026-04-26T20:33:47.865+05:30  WARN 18295 --- [cart-service] [  restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2026-04-26T20:33:47.894+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2026-04-26T20:33:47.914+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2026-04-26T20:33:47.918+05:30  INFO 18295 --- [cart-service] [  restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2026-04-26T20:33:47.926+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2026-04-26T20:33:48.168+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2026-04-26T20:33:48.169+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2026-04-26T20:33:48.171+05:30  INFO 18295 --- [cart-service] [  restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2026-04-26T20:33:48.172+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1777215828172 with initial instances count: 4
+2026-04-26T20:33:48.175+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CART-SERVICE with eureka with status UP
+2026-04-26T20:33:48.176+05:30  INFO 18295 --- [cart-service] [  restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1777215828176, current=UP, previous=STARTING]
+2026-04-26T20:33:48.177+05:30  INFO 18295 --- [cart-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CART-SERVICE/10.96.131.185:cart-service:8089: registering service...
+2026-04-26T20:33:48.189+05:30  INFO 18295 --- [cart-service] [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8089 (http) with context path '/'
+2026-04-26T20:33:48.190+05:30  INFO 18295 --- [cart-service] [  restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8089
+2026-04-26T20:33:48.207+05:30  INFO 18295 --- [cart-service] [  restartedMain] c.j.cartservice.CartServiceApplication   : Started CartServiceApplication in 5.986 seconds (process running for 6.351)
+2026-04-26T20:33:48.212+05:30  INFO 18295 --- [cart-service] [foReplicator-%d] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CART-SERVICE/10.96.131.185:cart-service:8089 - registration status: 204
+2026-04-26T20:38:47.929+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T20:43:06.047+05:30  INFO 18295 --- [cart-service] [nio-8089-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-04-26T20:43:06.048+05:30  INFO 18295 --- [cart-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-04-26T20:43:06.050+05:30  INFO 18295 --- [cart-service] [nio-8089-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:43:06.511+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-1] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+2026-04-26T20:43:47.932+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:43:57.425+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-2] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:46:14.500+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+2026-04-26T20:48:47.933+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:52:59.900+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+2026-04-26T20:53:47.935+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:54:51.681+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-8] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T20:55:15.379+05:30  WARN 18295 --- [cart-service] [nio-8089-exec-9] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.jitendra.cartservice.exception.CartNotFoundException: Cart not found for user: 2]
+2026-04-26T20:58:47.936+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/add
+rolesHeader->USER,ADMIN
+email->kjitendra1895@gmail.com
+userId->2
+authorities->ROLE_ADMIN
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:03:47.937+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:08:47.938+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:13:47.943+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:18:47.944+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:23:47.945+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:28:47.947+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:33:47.948+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:38:47.948+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:43:47.950+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:48:47.951+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T21:53:47.955+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T21:58:47.956+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:03:47.957+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:08:47.958+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:13:47.962+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:18:47.963+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:23:47.968+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T22:28:47.972+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:33:47.972+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T22:38:47.973+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:43:47.973+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:48:47.974+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T22:53:47.975+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T22:58:47.976+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T23:03:47.977+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T23:08:47.978+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T23:13:47.979+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T23:18:47.980+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T23:23:47.984+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+path->/api/v1/carts/internal/2
+rolesHeader->null
+email->null
+userId->null
+user->2
+Getting cart for userId: 2
+2026-04-26T23:28:47.988+05:30  INFO 18295 --- [cart-service] [rap-executor-%d] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2026-04-26T23:29:37.132+05:30  INFO 18295 --- [cart-service] [xecutorLoop-1-1] i.l.core.protocol.ConnectionWatchdog     : Reconnecting, last destination was localhost/127.0.0.1:6379
+2026-04-26T23:29:37.178+05:30  WARN 18295 --- [cart-service] [ioEventLoop-4-2] i.l.core.protocol.ConnectionWatchdog     : Cannot reconnect to [localhost/<unresolved>:6379]: Connection reset
+
+java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394) ~[na:na]
+	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426) ~[na:na]
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:255) ~[netty-buffer-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132) ~[netty-buffer-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:356) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562) ~[netty-transport-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:994) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.112.Final.jar:4.1.112.Final]
+	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
+

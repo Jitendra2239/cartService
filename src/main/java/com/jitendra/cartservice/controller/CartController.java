@@ -2,6 +2,7 @@ package com.jitendra.cartservice.controller;
 
 
 
+import com.jitendra.cartservice.dto.CartDto;
 import com.jitendra.cartservice.model.Cart;
 import com.jitendra.cartservice.model.CartItem;
 import com.jitendra.cartservice.service.CartService;
@@ -22,16 +23,28 @@ public class CartController {
 
     @PreAuthorize("hasRole('USER')")
     @GetMapping
-    public ResponseEntity<Cart> getCart(Authentication authentication) {
+    public ResponseEntity<CartDto> getCart(Authentication authentication) {
 
-        Long userId =  Long.parseLong(authentication.getPrincipal().toString());
+        String user=authentication.getPrincipal().toString();
+        System.out.println("user->"+user);
+
+
+        return ResponseEntity.ok(cartService.getCart(Long.parseLong(user)));
+    }
+
+    @GetMapping("/internal/{userId}")
+    public ResponseEntity<CartDto> getCart1(@PathVariable Long userId) {
+
+
+        System.out.println("user->"+userId);
+
 
         return ResponseEntity.ok(cartService.getCart(userId));
     }
 
     @PreAuthorize("hasRole('USER')")
     @PostMapping("/add")
-    public ResponseEntity<Cart> addItem(
+    public ResponseEntity<CartDto> addItem(
             @RequestBody CartItem item,
             Authentication authentication) throws ExecutionException, InterruptedException {
 
@@ -43,7 +56,7 @@ public class CartController {
 
     @PreAuthorize("hasRole('USER')")
     @DeleteMapping("/remove/{productId}")
-    public ResponseEntity<Cart> removeItem(
+    public ResponseEntity<CartDto> removeItem(
             @PathVariable Long productId,
             Authentication authentication) {
 
